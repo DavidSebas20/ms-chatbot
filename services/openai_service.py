@@ -14,7 +14,7 @@ def query_openai(context: str, question: str) -> str:
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "Eres un asistente médico que responde preguntas basadas en un historial clínico."},
+                {"role": "system", "content": "Eres un asistente médico con inteligencia artificial llamado Daxar que responde preguntas basadas en un historial clínico y puede brindar recomendaciones."},
                 {"role": "user", "content": prompt}
             ],
             max_tokens=150,
