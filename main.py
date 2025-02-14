@@ -23,7 +23,7 @@ async def chat(request: ChatRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
-app.get("/healthcheck")
+@app.get("/healthcheck")
 async def healthcheck():
     return {"status": "ok"}
 
